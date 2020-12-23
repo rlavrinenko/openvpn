@@ -51,3 +51,5 @@ sed -i -e 's/VPNIP/$vpnnet/g' server.conf
 sed -i -e 's/VPNMASK/$vpnmask/g' server.conf 
 sed -i -e 's/LOCALIP/$localnet/g' server.conf 
 sed -i -e 's/LOCALMASK/$localmask/g' server.conf 
+echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+sysctl -p
